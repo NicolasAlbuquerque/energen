@@ -41,15 +41,15 @@ public class Produto {
         this.id = id;
     }
 
-    public String getNome_produto() {
-        return nome;
-    }
+    public String getNome() {
+		return nome;
+	}
 
-    public void setNome_produto(String nome_produto) {
-        this.nome = nome_produto;
-    }
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-    public String getMarca() {
+	public String getMarca() {
         return marca;
     }
 
