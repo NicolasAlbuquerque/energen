@@ -14,8 +14,8 @@ public class Produto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotBlank
-    @Size(min = 5, max = 50 , message = "O Atributo nome_produto é obrigatório")
-    private String nome_produto;
+    @Size(min = 5, max = 50 , message = "O Atributo nome é obrigatório")
+    private String nome;
     @NotBlank
     @Size(min = 1, max = 50 , message = "O Atributo marca é obrigatório")
     private String marca;
