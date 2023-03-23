@@ -42,11 +42,11 @@ public class Produto {
     }
 
     public String getNome_produto() {
-        return nome_produto;
+        return nome;
     }
 
     public void setNome_produto(String nome_produto) {
-        this.nome_produto = nome_produto;
+        this.nome = nome_produto;
     }
 
     public String getMarca() {
