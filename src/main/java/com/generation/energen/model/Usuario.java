@@ -9,6 +9,8 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 @Entity
 @Table(name = "tb_usuarios")
 public class Usuario {
@@ -30,12 +32,27 @@ public class Usuario {
 	@NotBlank(message = "O atributo telefone é obrigatorio!")
 	private String telefone;
 	
+	@Schema(example = "email@email.com.br")
 	@NotBlank(message = "O atributo usuario é obrigatorio!")
 	@Email(message = "O atributo usuario deve ser um email valido!")
 	private String usuario;
 	
 	@Size(max = 5000, message = "O link da foto não pode ser maior do que 5000 caracteres!")
 	private String foto;
+	
+	
+	
+	public Usuario(Long id,  String nome, String senha,String cpf,String telefone, String usuario, String foto) {
+		this.id = id;
+		this.nome = nome;
+		this.senha = senha;
+		this.cpf = cpf;
+		this.telefone = telefone;
+		this.usuario = usuario;
+		this.foto = foto;
+	}
+	
+	public Usuario() { }
 	
 	
 	public Long getId() {
