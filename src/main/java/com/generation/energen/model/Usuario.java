@@ -1,5 +1,7 @@
 package com.generation.energen.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,7 +11,6 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-import io.swagger.v3.oas.annotations.media.Schema;
 
 @Entity
 @Table(name = "tb_usuarios")
@@ -39,9 +40,7 @@ public class Usuario {
 	
 	@Size(max = 5000, message = "O link da foto não pode ser maior do que 5000 caracteres!")
 	private String foto;
-	
-	
-	
+
 	public Usuario(Long id,  String nome, String senha,String cpf,String telefone, String usuario, String foto) {
 		this.id = id;
 		this.nome = nome;
